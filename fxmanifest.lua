@@ -1,11 +1,13 @@
 fx_version("cerulean")
 game("gta5")
-description("js runtime monkaW")
-authors({ "itschip", "erik-sn", "TasoOneAsia", "kidz", "RockySouthpaw" })
+description("NPWD - A FiveM Phone")
+authors({ "itschip", "erik-sn", "TasoOneAsia", "kidz", "RockySouthpaw", "SamShanks", "c-wide", "mojito" })
 version("1.7.0")
+
 client_scripts({
 	"dist/game/client/client.js",
 	"dist/game/client/*.lua",
+	"apps/game/client/*.lua",
 })
 
 server_script({
