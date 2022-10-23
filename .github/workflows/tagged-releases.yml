@@ -72,10 +72,10 @@ jobs:
       - name: Bundle built files
         run: |
           mkdir -p ./temp/npwd/dist
-          cp ./{LICENSE,README.md,config.json,import.sql,fxmanifest.lua} ./temp/npwd/
+          cp ./{LICENSE,README.md,config.json,import.sql,fxmanifest.lua} ./temp/npwd
           cp -r ./dist/{game,html} ./temp/npwd/dist
           # Make sure we copy our one lua boy
-          mkdir ./temp/npwd/dist/client
+          mkdir ./temp/npwd/dist/game/client
           cp ./apps/game/client/cl_controls.lua ./temp/npwd/dist/client/cl_controls.lua
           cd ./temp && zip -r ../npwd.zip ./npwd
 
