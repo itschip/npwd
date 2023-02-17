@@ -32,7 +32,7 @@ async function fetchNui<T = any, D = any>(eventName: string, data?: D, mockResp?
     ? (window as any).GetParentResourceName()
     : 'npwd';
 
-  const resp = await fetch(`http://${resourceName}/${eventName}`, options);
+  const resp = await fetch(`http://cfx-nui-${resourceName}/${eventName}`, options);
 
   const responseObj = await resp.json();
 
