@@ -28,11 +28,11 @@ async function fetchNui<T = any, D = any>(eventName: string, data?: D, mockResp?
     return mockResp;
   } */
 
-  //const resourceName = (window as any).GetParentResourceName
-  //  ? (window as any).GetParentResourceName()
-  //  : 'npwd';
+  const resourceName = (window as any).GetParentResourceName
+    ? (window as any).GetParentResourceName()
+    : 'npwd';
 
-  const resp = await fetch(`http://localhost:6001/${eventName}`, options);
+  const resp = await fetch(`http://${resourceName}/${eventName}`, options);
 
   const responseObj = await resp.json();
 
